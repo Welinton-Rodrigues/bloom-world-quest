@@ -8,50 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 45 20% 96%;
-    --foreground: 120 15% 15%;
+    /* NASA Farm Navigators - Dashboard Theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 120 15% 15%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 120 15% 15%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 120 45% 35%;
+    /* Green for healthy vegetation */
+    --primary: 140 60% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 120 55% 45%;
-
-    --secondary: 30 35% 50%;
+    
+    /* Blue for water/irrigation */
+    --secondary: 200 85% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 45 15% 88%;
-    --muted-foreground: 120 10% 45%;
+    /* Beige/sand for soil */
+    --muted: 40 30% 85%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 200 60% 50%;
+    /* Orange for alerts */
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Red for critical alerts */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 120 20% 85%;
-    --input: 120 20% 85%;
-    --ring: 120 45% 35%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 140 60% 35%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(120 45% 35%), hsl(120 55% 45%));
-    --gradient-hero: linear-gradient(180deg, hsl(200 60% 50% / 0.1), hsl(120 45% 35% / 0.2));
-    --gradient-earth: linear-gradient(135deg, hsl(30 35% 50%), hsl(45 40% 60%));
+    /* Custom colors for game mechanics */
+    --soil-dry: 30 45% 50%;
+    --soil-moist: 140 50% 45%;
+    --water-blue: 200 85% 45%;
     
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(120 55% 45% / 0.3);
-    --shadow-elevated: 0 10px 40px -10px hsl(120 15% 15% / 0.2);
+    --shadow-panel: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.12);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -71,41 +74,40 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 120 20% 8%;
-    --foreground: 45 20% 96%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 120 15% 12%;
-    --card-foreground: 45 20% 96%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 120 15% 12%;
-    --popover-foreground: 45 20% 96%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 120 55% 45%;
-    --primary-foreground: 120 20% 8%;
-    --primary-glow: 120 65% 55%;
+    --primary: 140 60% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 35% 40%;
+    --secondary: 200 85% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 120 15% 18%;
-    --muted-foreground: 45 15% 65%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 200 60% 45%;
+    --accent: 25 95% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 50%;
+    --destructive: 0 84% 65%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 120 15% 18%;
-    --input: 120 15% 18%;
-    --ring: 120 55% 45%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 140 60% 45%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(120 55% 45%), hsl(120 65% 55%));
-    --gradient-hero: linear-gradient(180deg, hsl(200 60% 45% / 0.15), hsl(120 55% 45% / 0.25));
-    --gradient-earth: linear-gradient(135deg, hsl(30 35% 40%), hsl(45 40% 50%));
+    --soil-dry: 30 50% 45%;
+    --soil-moist: 140 55% 50%;
+    --water-blue: 200 85% 50%;
     
-    --shadow-glow: 0 0 35px hsl(120 65% 55% / 0.4);
-    --shadow-elevated: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-panel: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -124,5 +126,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
 }
